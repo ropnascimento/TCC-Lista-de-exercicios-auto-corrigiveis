@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/671/tags/2013.2/gabaritos/queue/src
+END
+queue.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/671/tags/2013.2/gabaritos/queue/src/queue.h
+END
+queue.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/671/tags/2013.2/gabaritos/queue/src/queue.cc
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/671/tags/2013.2/gabaritos/queue/src/main.cc
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/671/tags/2013.2/queue/src
+END
+queue.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/671/tags/2013.2/queue/src/queue.cc
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/671/tags/2013.2/queue/src/main.cc
+END
+queue.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/671/tags/2013.2/queue/src/queue.h
+END

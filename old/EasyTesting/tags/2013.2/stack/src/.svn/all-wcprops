@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/672/tags/2013.2/stack/src
+END
+stack.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/672/tags/2013.2/stack/src/stack.cc
+END
+stack.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/672/tags/2013.2/stack/src/stack.h
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/672/tags/2013.2/stack/src/main.cc
+END
