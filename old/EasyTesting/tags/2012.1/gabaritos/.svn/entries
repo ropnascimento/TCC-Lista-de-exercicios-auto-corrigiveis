@@ -1,0 +1,85 @@
+10
+
+dir
+755
+http://easytesting.googlecode.com/svn/tags/2012.1/gabaritos
+http://easytesting.googlecode.com/svn
+
+
+
+2012-03-17T16:54:03.793092Z
+573
+thiago.noronha@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+015e5c1f-a503-04f8-c584-ace6056cb9f1
+
+complexo_euclidiano
+dir
+
+recursao
+dir
+
+complexo_polar
+dir
+
+queue
+dir
+
+priority_queue
+dir
+
+ponto_3d
+dir
+
+gtest
+dir
+
+iteracao
+dir
+
+vetores
+dir
+
+matrizes
+dir
+
+hash_set
+dir
+
+ordered_set
+dir
+
+vector
+dir
+
+funcoes
+dir
+
+deque
+dir
+
+polinomio
+dir
+
+stack
+dir
+
+list
+dir
+
+agenda
+dir
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/751/trunk/stack_with_linked_list/src
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/751/trunk/stack_with_linked_list/src/main.cc
+END
+stack.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/751/trunk/stack_with_linked_list/src/stack.cc
+END
+stack.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/751/trunk/stack_with_linked_list/src/stack.h
+END

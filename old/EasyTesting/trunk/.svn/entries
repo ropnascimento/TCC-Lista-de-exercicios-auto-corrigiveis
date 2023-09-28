@@ -1,0 +1,100 @@
+10
+
+dir
+755
+http://easytesting.googlecode.com/svn/trunk
+http://easytesting.googlecode.com/svn
+
+
+
+2014-10-28T14:04:16.256732Z
+755
+thiago.noronha@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+015e5c1f-a503-04f8-c584-ace6056cb9f1
+
+agenda
+dir
+
+ordered_map
+dir
+
+stack_with_linked_list
+dir
+
+complexo_euclidiano
+dir
+
+recursao
+dir
+
+complexo_polar
+dir
+
+unordered_map
+dir
+
+priority_queue
+dir
+
+vetores
+dir
+
+iteracao
+dir
+
+matrizes
+dir
+
+stack_with_array
+dir
+
+queue_with_linked_list
+dir
+
+vector
+dir
+
+condicionais
+dir
+
+unordered_set
+dir
+
+ordered_set_with_bst
+dir
+
+funcoes
+dir
+
+deque
+dir
+
+ordered_multiset
+dir
+
+list
+dir
+
+ordered_set_with_linked_list
+dir
+
+unordered_multiset
+dir
+
+queue_with_array
+dir
+

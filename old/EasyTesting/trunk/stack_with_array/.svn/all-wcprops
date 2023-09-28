@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/750/trunk/stack_with_array
+END
+input.txt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/709/trunk/stack_with_array/input.txt
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/750/trunk/stack_with_array/makefile
+END
+stack.cbp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/750/trunk/stack_with_array/stack.cbp
+END

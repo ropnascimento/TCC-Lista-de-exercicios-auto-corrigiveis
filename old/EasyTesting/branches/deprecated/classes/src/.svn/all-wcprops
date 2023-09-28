@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/670/branches/deprecated/classes/src
+END
+ponto.cc
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/670/branches/deprecated/classes/src/ponto.cc
+END
+retangulo.cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/670/branches/deprecated/classes/src/retangulo.cc
+END
+circunferencia.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/670/branches/deprecated/classes/src/circunferencia.cc
+END
+ponto.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/670/branches/deprecated/classes/src/ponto.h
+END
+circunferencia.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/670/branches/deprecated/classes/src/circunferencia.h
+END
+retangulo.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/670/branches/deprecated/classes/src/retangulo.h
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/670/branches/deprecated/classes/src/main.cc
+END
+triangulo.cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/670/branches/deprecated/classes/src/triangulo.cc
+END
+triangulo.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/670/branches/deprecated/classes/src/triangulo.h
+END
