@@ -1,7 +1,7 @@
 // copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 
 #include "test/funcoes_test.h"
-#include "/Archives/doctest/doctest.h"
+#include "Archives/doctest/doctest.h"
 
 int main() {
 

@@ -32,8 +32,9 @@ main.o:
 $(program).o:
 	$(cc) -I $(path) -c src/$(program).cc
 
+# Adicionando a flag -std=c++11 para compatibilidade com o Doctest
 $(program)_test.o:
-	$(cc) -I $(path) -c test/$(program)_test.cc -std=c++11  # Adicionando a flag -std=c++11 para compatibilidade com o Doctest
+	$(cc) -I $(path) -c test/$(program)_test.cc -std=c++11  
 
 clean:
 	@rm -f main.o $(program).o $(program)_test.o a.out

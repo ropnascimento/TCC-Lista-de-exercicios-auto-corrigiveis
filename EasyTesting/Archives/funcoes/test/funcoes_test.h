@@ -1,7 +1,7 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 #ifndef DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "/Archives/doctest/doctest.h"
+#include "Archives/doctest/doctest.h"
 #include "src/funcoes.h"
 
 #include <cmath>
