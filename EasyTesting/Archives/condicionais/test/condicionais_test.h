@@ -8,7 +8,7 @@
 #include <string>
 
 #include "src/condicionais.h"
-#include "doctest.h"
+#include "/Archives/doctest/doctest.h"
 
 namespace Teste {
 TEST_CASE("Testa_menor") {
@@ -16,7 +16,7 @@ TEST_CASE("Testa_menor") {
   int entrada_y = 3;
   int resposta = menor(entrada_x, entrada_y);
   int esperado = 2;
-  CHECK_EQ(resposta, esperado);
+  CHECK_EQ(resposta, esperado)
     << "-------------------------------------------------------------------\n"
     << "Erro na funcao:  "
     << "* int menor(int x, int y); *\n"

@@ -1,7 +1,7 @@
 // copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 
 #include "test/condicionais_test.h"
-#include "doctest.h"
+#include "/Archives/doctest/doctest.h"
 
 int main() {
     doctest::Context context;
