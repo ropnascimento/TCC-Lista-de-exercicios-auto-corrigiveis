@@ -1,9 +1,13 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 
-#include "test/matrizes_test.h"
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "Archives/doctest/doctest.h"
 
 int main(int argc, char** argv) {
-    testing::InitGoogleTest(&argc, argv);
-    testing::GTEST_FLAG(print_time) = false;
-    return RUN_ALL_TESTS();
+    doctest::Context context;
+    context.setOption("no-breaks", true);
+    context.setOption("no-timeouts", true);
+    context.applyCommandLine(argc, argv);
+    int res = context.run();
+    return res;
 }
