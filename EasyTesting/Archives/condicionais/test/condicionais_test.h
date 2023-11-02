@@ -8,7 +8,7 @@
 #include <string>
 
 #include "src/condicionais.h"
-#include "/Archives/doctest/doctest.h"
+#include "../doctest/doctest.h"
 
 namespace Teste {
 TEST_CASE("Testa_menor") {
@@ -16,15 +16,15 @@ TEST_CASE("Testa_menor") {
   int entrada_y = 3;
   int resposta = menor(entrada_x, entrada_y);
   int esperado = 2;
-  CHECK_EQ(resposta, esperado)
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* int menor(int x, int y); *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_x << ", " << entrada_y << "\n\n"
-    << "   Resultado esperado:  " << esperado << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  CHECK_EQ(resposta, esperado);
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* int menor(int x, int y); *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_x << ", " << entrada_y << "\n\n");
+  INFO("   Resultado esperado:  " << esperado);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_maior_entre_tres_numeros") {
@@ -34,15 +34,15 @@ TEST_CASE("Testa_maior_entre_tres_numeros") {
   int resposta = maior(entrada_x, entrada_y, entrada_z);
   int esperado = 10;
   CHECK_EQ(resposta, esperado);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* int maior(int x, int y, int z); *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_x << ", "
-    << entrada_y << ", " << entrada_z << "\n\n"
-    << "   Resultado esperado:  " << esperado << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* int maior(int x, int y, int z); *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_x << ", "
+       << entrada_y << ", " << entrada_z << "\n\n");
+  INFO("   Resultado esperado:  " << esperado);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_verifica_se_par") {
@@ -50,14 +50,14 @@ TEST_CASE("Testa_verifica_se_par") {
   bool resposta = par(entrada_x);
   bool esperado = true;
   CHECK(resposta == esperado);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* bool verifica_par_impar(int x) *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_x << "\n\n"
-    << "   Resultado esperado:  " << esperado << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* bool verifica_par_impar(int x) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_x << "\n\n");
+  INFO("   Resultado esperado:  " << esperado);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_verifica_se_impar") {
@@ -65,14 +65,14 @@ TEST_CASE("Testa_verifica_se_impar") {
   bool resposta = par(entrada_x);
   bool esperado = false;
   CHECK(resposta == esperado);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* bool verifica_par_impar(int x) *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_x << "\n\n"
-    << "   Resultado esperado:  " << esperado << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* bool verifica_par_impar(int x) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_x << "\n\n");
+  INFO("   Resultado esperado:  " << esperado);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_triangulo_equilatero") {
@@ -82,15 +82,15 @@ TEST_CASE("Testa_triangulo_equilatero") {
 
   bool resposta = equilatero(entrada_a, entrada_b, entrada_c);
   CHECK(resposta == true);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* bool equilatero(float a, float b, float c) *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_a << ", "
-    <<  entrada_b <<  ", " <<  entrada_c << "\n\n"
-    << "   Resultado esperado:  " << true << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* bool equilatero(float a, float b, float c) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_a << ", "
+       << entrada_b <<  ", " <<  entrada_c << "\n\n");
+  INFO("   Resultado esperado:  " << true);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_triangulo_isosceles") {
@@ -100,15 +100,15 @@ TEST_CASE("Testa_triangulo_isosceles") {
 
   bool resposta = isosceles(entrada_a, entrada_b, entrada_c);
   CHECK(resposta == true);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* boll isosceles(float a, float b, float c) *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_a << ", "
-    <<  entrada_b  << ", " <<  entrada_c << "\n\n"
-    << "   Resultado esperado:  " << true << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* bool isosceles(float a, float b, float c) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_a << ", "
+       <<  entrada_b  << ", " <<  entrada_c << "\n\n");
+  INFO("   Resultado esperado:  " << true);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_triangulo_escaleno") {
@@ -118,15 +118,15 @@ TEST_CASE("Testa_triangulo_escaleno") {
 
   bool resposta = escaleno(entrada_a, entrada_b, entrada_c);
   CHECK(resposta == true);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* bool escaleno(float a, float b, float c) *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << entrada_a << ", "
-    <<  entrada_b << ", " <<  entrada_c << "\n\n"
-    << "   Resultado esperado:  " << true << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* bool escaleno(float a, float b, float c) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << entrada_a << ", "
+       <<  entrada_b << ", " <<  entrada_c << "\n\n");
+  INFO("   Resultado esperado:  " << true);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 TEST_CASE("Testa_signo") {
@@ -135,14 +135,14 @@ TEST_CASE("Testa_signo") {
   std::string resposta = signo(dia, mes);
   std::string esperado = "Libra";
   CHECK(resposta == esperado);
-    << "-------------------------------------------------------------------\n"
-    << "Erro na funcao:  "
-    << "* string signo(int dia, int mes); *\n"
-    << "-------------------------------------------------------------------\n"
-    << "\nValores de entrada : " << dia << ", " << mes << ", " << "\n\n"
-    << "   Resultado esperado:  " << true << "\n"
-    << "   Resultado retornado: " << resposta << "\n\n"
-    << "-------------------------------------------------------------------\n";
+  INFO("-------------------------------------------------------------------");
+  INFO("Erro na funcao:  ");
+  INFO("* std::string signo(int dia, int mes) *");
+  INFO("-------------------------------------------------------------------");
+  INFO("\nValores de entrada : " << dia << ", " << mes << ", " << "\n\n");
+  INFO("   Resultado esperado:  " << esperado);
+  INFO("   Resultado retornado: " << resposta);
+  INFO("-------------------------------------------------------------------");
 }
 
 }  // namespace Teste
