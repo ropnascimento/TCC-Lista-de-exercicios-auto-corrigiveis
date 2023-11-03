@@ -7,8 +7,8 @@ program = agenda
 
 # Gera o binário do programa e de testes e mantém dependências
 all: clean main.o $(program).o $(program)_test.o
-	$(cc) -I $(path) -L../EasyTesting/Archives/doctest/ -ldoctest -lstdc++ -WL,--whole-archive   main.o $(program).o -o main
-	$(cc) -I $(path) -L../EasyTesting/Archives/doctest/ -ldoctest -lstdc++ -WL,--whole-archive   $(program).o $(program)_test.o -o easy_testing
+	$(cc) -I $(path) -L/home/rafael/Documentos/UFMG/TCC/TCC-Lista-de-exercicios-auto-corrigiveis/EasyTesting/Archives/doctest/lib -ldoctest main.o $(program).o -o main
+	$(cc) -I $(path) -L/home/rafael/Documentos/UFMG/TCC/TCC-Lista-de-exercicios-auto-corrigiveis/EasyTesting/Archives/doctest/lib -ldoctest $(program).o $(program)_test.o -o easy_testing
 	@echo "--------------------------------------------------------------"
 	@echo "main: executa o programa em main.cc."
 	@echo "easy_testing: testa as funções implementadas em $(program).cc."
@@ -16,7 +16,7 @@ all: clean main.o $(program).o $(program)_test.o
 
 # Roda o programa e deleta dependências e o binário
 run: clean main.o $(program).o
-	$(cc) -I $(path) -L../EasyTesting/Archives/doctest/ -ldoctest -lstdc++ -WL,--whole-archive   main.o $(program).o
+	$(cc) -I $(path) -L/home/rafael/Documentos/UFMG/TCC/TCC-Lista-de-exercicios-auto-corrigiveis/EasyTesting/Archives/doctest/lib -ldoctest main.o $(program).o
 	@./main
 	@rm -f $(program).o main
 
