@@ -1,7 +1,7 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 
 
-#include "Archives/doctest/doctest.h"
+#include "../doctest/doctest.h"
 #include <sstream>
 #include <string>
 #include "src/list.h"

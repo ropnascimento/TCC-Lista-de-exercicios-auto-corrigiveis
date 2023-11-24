@@ -4,14 +4,17 @@ cc = g++
 path = .
 # Nome da lista de exercicios
 program = recursao
+# Caminho para o diretório do Doctest
+doctest_path = ../doctest/doctest.h
+
 
 # Gera o binario do programa e de testes e mantem dependencias
 all: clean main.o $(program).o $(program)_test.o
 	$(cc) -I $(path) main.o $(program).o -o main
-	$(cc) -I $(path) $(program).o $(program)_test.o -o doctest_testing
+	$(cc) -I $(path) $(doctest_path) $(program).o $(program)_test.o -o doctest_testing
 	@echo "--------------------------------------------------------------"
-	@echo "main: executa o programa em main.cc."
-	@echo "doctest_testing: testa as funções implementadas em $(program).cc."
+	@echo "main: executa o programa em main.cpp."
+	@echo "doctest_testing: testa as funções implementadas em $(program).cpp."
 	@echo "--------------------------------------------------------------"
 
 # Roda o programa e deleta dependencias e o binario
@@ -26,13 +29,13 @@ test: clean $(program).o $(program)_test.o
 	@./doctest_testing
 
 main.o:
-	$(cc) -I $(path) -c src/main.cc
+	$(cc) -I $(path) -c src/main.cpp
 
 $(program).o:
-	$(cc) -I $(path) -c src/$(program).cc
+	$(cc) -I $(path) -c src/$(program).cpp
 
 $(program)_test.o:
-	$(cc) -I $(path) -c test/$(program)_test.cc
+	$(cc) -I $(path) $(doctest_path) -c test/$(program)_test.cpp
 
 clean:
 	@rm -f main.o $(program).o $(program)_test.o doctest_testing

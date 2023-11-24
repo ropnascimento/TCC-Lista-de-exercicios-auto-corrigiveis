@@ -1,8 +1,5 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
-
-#define DOCTEST_CONFIG_IMPLEMENT
-
-#include "Archives/doctest/doctest.h"
+#include "../doctest/doctest.h"
 #include "src/matrizes.h"
 
 using std::string;
@@ -30,7 +27,7 @@ class Teste {
   }
 
   // Imprime duas Matrizes determinadas
-  string Imprime_2_Matrizes(int n, int m, int espacos,
+  string " " << Imprime_2_Matrizes(int n, int m, int espaco << "\n"s,
                             float A[][MAX], float B[][MAX]) {
     stringstream output;
     for (int i = 0; i < n; ++i) {
@@ -71,14 +68,13 @@ TEST_CASE("Tasta_MediaMatriz_com_matriz_1x1") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(1, 1, 28, mat)
-      << "\nMedia esperada: " << esperado << "\n"
-      << "Media retornada: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(1, 1, 28, mat));
+    INFO( "\nMedia esperada: " << esperado << "\n");
+    INFO( "Media retornada: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -93,16 +89,15 @@ TEST_CASE("Testa_divisao_correta_na_MediaMatriz") {
   CHECK(resultado != doctest::Approx(inesperado));
   if (resultado == doctest::Approx(inesperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 18, mat)
-      << "\nMedia esperada: " << 1.0 << "\n"
-      << "Media retornada: " << resultado << "\n"
-      << "  Provavelmente a divisao do seu somatorio eh por n, enquanto\n"
-      << "deveria ser por n*n\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 18, mat));
+    INFO( "\nMedia esperada: " << 1.0 << "\n");
+    INFO( "Media retornada: " << resultado << "\n");
+    INFO( "  Provavelmente a divisao do seu somatorio eh por n, enquanto\n");
+    INFO( "deveria ser por n*n\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -119,27 +114,26 @@ TEST_CASE("Testa_MediaMatriz_com_elementos_positivos") {
   CHECK(soma != doctest::Approx(resultado));
   if (soma == doctest::Approx(resultado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n"
-      << "-------------------------------------------------------------------\n"
-      << "  A funcao retornou a soma dos elementos da matriz.\n"
-      << "Verifique se esta funcao dividi a soma dos elementos\n"
-      << "da matriz pelo numero de elementos dela\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "  A funcao retornou a soma dos elementos da matriz.\n");
+    INFO( "Verifique se esta funcao dividi a soma dos elementos\n");
+    INFO( "da matriz pelo numero de elementos dela\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 
   REQUIRE(resultado == doctest::Approx(esperado));
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 20, mat)
-      << "\nMedia esperada: " << esperado << "\n"
-      << "Media retornada: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 20, mat));
+    INFO( "\nMedia esperada: " << esperado << "\n");
+    INFO( "Media retornada: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -154,14 +148,13 @@ TEST_CASE("Testa_MediaMatriz_com_elementos_negativos") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 18, mat)
-      << "\nMedia esperada: " << esperado << "\n"
-      << "Media retornada: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"float Media(int n, float matriz[][])\".          \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 18, mat));
+    INFO( "\nMedia esperada: " << esperado << "\n");
+    INFO( "Media retornada: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -174,15 +167,14 @@ TEST_CASE("Testa_Identidade_com_matriz_1x1") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"void identidade(int n, float matriz[][])\".      \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(1, 1, 28, mat)
-      << "\n         Resposta incorreta        Resposta correta\n\n"
-      << Imprime_2_Matrizes(1, 1, 20, mat, mat_esperada)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"void identidade(int n, float matriz[][])\".      \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(1, 1, 28, mat));
+    INFO( "\n         Resposta incorreta        Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(1, 1, 20, mat, mat_esperada) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -198,13 +190,13 @@ TEST_CASE("Testa_Identidade") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"void identidade(int n, float matriz[][])\".      \n"
-      << "-------------------------------------------------------------------\n"
-      << "\n           Resposta incorreta       Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 12, mat, mat_esperada)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"void identidade(int n, float matriz[][])\".      \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "\n           Resposta incorreta       Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 12, mat, mat_esperada) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -217,15 +209,14 @@ TEST_CASE("Testa_Transposta_com_matriz_1x1") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"void transposta(int n, float [][], float [][]))\"\n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(1, 1, 28, mat)
-      << "\n         Resposta incorreta        Resposta correta\n\n"
-      << Imprime_2_Matrizes(1, 1, 20, mat_resultado, mat)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"void transposta(int n, float [][], float [][]))\"\n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(1, 1, 28, mat));
+    INFO( "\n         Resposta incorreta        Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(1, 1, 20, mat_resultado, mat) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -245,15 +236,14 @@ TEST_CASE("Testa_Transposta_com_matriz_4x4") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"void transposta(int n, float [][], float [][]))\"\n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 21, mat)
-      << "\n        Resposta incorreta               Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 5, mat_resultado, mat_esperada)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"void transposta(int n, float [][], float [][]))\"\n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 21, mat));
+    INFO( "\n        Resposta incorreta               Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 5, mat_resultado, mat_esperada) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -267,14 +257,13 @@ TEST_CASE("Testa_Simetrica_com_matrizes_nao_simetrica") {
   CHECK(!resultado);
   if (resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na funcao: \"void simetrica(int n, float [][]))\"             \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 22, mat)
-      << "\n"
-      << "Matriz não simétrica, porém a função retornou true\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na funcao: \"void simetrica(int n, float [][]))\"             \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 22, mat));
+    INFO( "\n");
+    INFO( "Matriz não simétrica, porém a função retornou true\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -288,13 +277,12 @@ TEST_CASE("Testa_Simetrica_com_matrizes_simetricas") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"void simetrica(int n, float [][]))\"             \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 18, mat)
-      << "\nMatriz simétrica, porém a função retornou false\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"void simetrica(int n, float [][]))\"             \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 18, mat));
+    INFO( "\nMatriz simétrica, porém a função retornou false\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -318,16 +306,16 @@ TEST_CASE("Testa_SomaMatriz_com_matrizes_arbitrarias") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"void soma_matriz\n"
-      << "                        (int n, float[][], float[][], float[][])\" \n"
-      << "-------------------------------------------------------------------\n"
-      << "         Matriz de Entrada 1            Matriz de Entrada 2\n\n"
-      << Imprime_2_Matrizes(4, 4, 6, mat1, mat2)
-      << "\n         Resposta incorreta               Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 6, mat_resultado, mat_esp)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"void soma_matriz\n");
+    INFO( "                        (int n, float[][], float[][], float[][])\" \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "         Matriz de Entrada 1            Matriz de Entrada 2\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 6, mat1, mat2) << "\n");
+    INFO( "\n         Resposta incorreta               Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 6, mat_resultado, mat_esp) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -351,16 +339,16 @@ TEST_CASE("Testa_SomaMatriz_com_matriz_nula") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"void soma_matriz\n"
-      << "                        (int n, float[][], float[][], float[][])\" \n"
-      << "-------------------------------------------------------------------\n"
-      << "           Matriz de Entrada 1         Matriz de Entrada 2\n\n"
-      << Imprime_2_Matrizes(4, 4, 8, mat1, mat2)
-      << "\n        Resposta incorreta               Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 5, mat_resultado, mat_esperada)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"void soma_matriz\n");
+    INFO( "                        (int n, float[][], float[][], float[][])\" \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "           Matriz de Entrada 1         Matriz de Entrada 2\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 8, mat1, mat2) << "\n");
+    INFO( "\n        Resposta incorreta               Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 5, mat_resultado, mat_esperada) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -384,16 +372,16 @@ TEST_CASE("Testa_MultMatriz_com_matrizes_arbitrarias") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"void mult_matriz\n"
-      << "                        (int n, float[][], float[][], float[][])\" \n"
-      << "-------------------------------------------------------------------\n"
-      << "         Matriz de Entrada 1            Matriz de Entrada 2\n\n"
-      << Imprime_2_Matrizes(4, 4, 6, mat1, mat2)
-      << "\n         Resposta incorreta               Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 15, mat_resultado, mat_esp)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"void mult_matriz\n");
+    INFO( "                        (int n, float[][], float[][], float[][])\" \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "         Matriz de Entrada 1            Matriz de Entrada 2\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 6, mat1, mat2) << "\n");
+    INFO( "\n         Resposta incorreta               Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 15, mat_resultado, mat_esp) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -413,16 +401,16 @@ TEST_CASE("Testa_MultMatriz_com_matriz_identidade") {
   CHECK(resultado);
   if (!resultado) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"void mult_matriz\n"
-      << "                        (int n, float[][], float[][], float[][])\" \n"
-      << "-------------------------------------------------------------------\n"
-      << "         Matriz de Entrada 1           Matriz Identidade\n\n"
-      << Imprime_2_Matrizes(4, 4, 6, mat1, mat2)
-      << "\n         Resposta incorreta               Resposta correta\n\n"
-      << Imprime_2_Matrizes(4, 4, 10, mat_resultado, mat_esperada)
-      << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"void mult_matriz\n");
+    INFO( "                        (int n, float[][], float[][], float[][])\" \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "         Matriz de Entrada 1           Matriz Identidade\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 6, mat1, mat2) << "\n");
+    INFO( "\n         Resposta incorreta               Resposta correta\n\n");
+    INFO( " " << Imprime_2_Matrizes(4, 4, 10, mat_resultado, mat_esperada) << "\n");
+    INFO( "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -434,15 +422,14 @@ TEST_CASE("Testa_Determinante_com_matriz_1x1") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"float determinante\n"
-      << "                        (int n, float matriz[][])\"                \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(1, 1, 19, mat)
-      << "\nDeterminante esperado: " << esperado << "\n"
-      << "Determinante retornado: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"float determinante\n");
+    INFO( "                        (int n, float matriz[][])\"                \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(1, 1, 19, mat));
+    INFO( "\nDeterminante esperado: " << esperado << "\n");
+    INFO( "Determinante retornado: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -455,15 +442,14 @@ TEST_CASE("Testa_Determinante_com_matriz_2x2") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"float determinante\n"
-      << "                        (int n, float matriz[][])\"                \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(2, 2, 19, mat)
-      << "\nDeterminante esperado: " << esperado << "\n"
-      << "Determinante retornado: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"float determinante\n");
+    INFO( "                        (int n, float matriz[][])\"                \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(2, 2, 19, mat));
+    INFO( "\nDeterminante esperado: " << esperado << "\n");
+    INFO( "Determinante retornado: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -477,15 +463,14 @@ TEST_CASE("Testa_Determinante_com_matriz_3x3") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"float determinante\n"
-      << "                        (int n, float matriz[][])\"                \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(3, 3, 19, mat)
-      << "\nDeterminante esperado: " << esperado << "\n"
-      << "Determinante retornado: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"float determinante\n");
+    INFO( "                        (int n, float matriz[][])\"                \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(3, 3, 19, mat));
+    INFO( "\nDeterminante esperado: " << esperado << "\n");
+    INFO( "Determinante retornado: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 
@@ -500,15 +485,14 @@ TEST_CASE("Testa_Determinante_com_matriz_4x4") {
   CHECK(resultado == doctest::Approx(esperado));
   if (resultado != doctest::Approx(esperado)) {
     std::cerr
-      << "-------------------------------------------------------------------\n"
-      << "Erro na função: \"float determinante\n"
-      << "                        (int n, float matriz[][])\"                \n"
-      << "-------------------------------------------------------------------\n"
-      << "Matriz de Entrada:\n\n"
-      << Imprime_1_Matriz(4, 4, 19, mat)
-      << "\nDeterminante esperado: " << esperado << "\n"
-      << "Determinante retornado: " << resultado << "\n"
-      << "-------------------------------------------------------------------\n";
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Erro na função: \"float determinante\n");
+    INFO( "                        (int n, float matriz[][])\"                \n");
+    INFO( "-------------------------------------------------------------------\n");
+    INFO( "Matriz de Entrada:"<< Imprime_1_Matriz(4, 4, 19, mat));
+    INFO( "\nDeterminante esperado: " << esperado << "\n");
+    INFO( "Determinante retornado: " << resultado << "\n");
+    INFO( "-------------------------------------------------------------------\n";);
   }
 }
 

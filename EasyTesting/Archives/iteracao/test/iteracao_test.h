@@ -1,13 +1,13 @@
 // copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 
-#ifndef DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#ifndef TRUNK_ITERACAO_TEST_ITERACAO_TEST_H_
+#define TRUNK_ITERACAO_TEST_ITERACAO_TEST_H_
 
 #include <sstream>
 #include <string>
 
 #include "src/iteracao.h"
-#include "/Archives/doctest/doctest.h"
+#include "../doctest/doctest.h"
 
 using std::string;
 using std::stringstream;
@@ -19,14 +19,14 @@ TEST_CASE("Teste_Fatorial") {
   int num_testes = 3;
 
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == fat(entrada[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int fat(int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valor de entrada: " << entrada[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << fat(entrada[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int fat(int)\n");
+    INFO("\nValor de entrada: " << entrada[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << fat(entrada[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == fat(entrada[i]));
   }
 }
 
@@ -34,22 +34,22 @@ TEST_CASE("Teste_Potenciacao") {
   // Casos analisados:
   // Expoente igual a 0,
   // Base negativa com expoente par,
-  // Base negativa com expoente impar,
-  // Base positiva com expoente nao nulo.
+  // Base negativa com expoente ímpar,
+  // Base positiva com expoente não nulo.
   int esperado[] = {1, 16, -1, 9};
   int entrada1[] = {5, -2, -1, 3};
   int entrada2[] = {0, 4, 3, 2};
   int num_testes = 4;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == pow(entrada1[i], entrada2[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int pow(int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << " elevado a " << entrada2[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << pow(entrada1[i], entrada2[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int pow(int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << " elevado a " << entrada2[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << pow(entrada1[i], entrada2[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == pow(entrada1[i], entrada2[i]));
   }
 }
 
@@ -64,15 +64,15 @@ TEST_CASE("Teste_MDC_entre_dois_numeros") {
   int entrada2[] = {11, 27, 13, 20};
   int num_testes = 4;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == mdc(entrada1[i], entrada2[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int mdc(int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << " e " << entrada2[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << mdc(entrada1[i], entrada2[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int mdc(int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << " e " << entrada2[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << mdc(entrada1[i], entrada2[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == mdc(entrada1[i], entrada2[i]));
   }
 }
 
@@ -89,15 +89,15 @@ TEST_CASE("Teste_MDC_entre_tres_numeros") {
   int entrada3[] = {10, 50, 13, 45, 12};
   int num_testes = 5;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == mdc3(entrada1[i], entrada2[i], entrada3[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int mdc3(int, int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << ",  " << entrada2[i] << " e " << entrada3[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << mdc3(entrada1[i], entrada2[i], entrada3[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int mdc3(int, int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << ",  " << entrada2[i] << " e " << entrada3[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << mdc3(entrada1[i], entrada2[i], entrada3[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == mdc3(entrada1[i], entrada2[i], entrada3[i]));
   }
 }
 
@@ -112,15 +112,15 @@ TEST_CASE("Teste_MMC") {
   int entrada2[] = {10, 27, 21, 10};
   int num_testes = 4;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == mmc(entrada1[i], entrada2[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int mmc(int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << " e " << entrada2[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << mmc(entrada1[i], entrada2[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int mmc(int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << " e " << entrada2[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << mmc(entrada1[i], entrada2[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == mmc(entrada1[i], entrada2[i]));
   }
 }
 
@@ -133,14 +133,14 @@ TEST_CASE("Teste_sequencia_de_Fibonacci") {
   int entrada[] = {0, 1, 4};
   int num_testes = 3;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == fib(entrada[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int fib(int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << fib(entrada[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int fib(int)\n");
+    INFO("\nValores de entrada: " << entrada[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << fib(entrada[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == fib(entrada[i]));
   }
 }
 
@@ -155,15 +155,15 @@ TEST_CASE("Teste_do_Resto") {
   int entrada2[] = {4, 4, 3, 10};
   int num_testes = 4;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == resto(entrada1[i], entrada2[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int resto(int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << " dividido por " << entrada2[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << resto(entrada1[i], entrada2[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int resto(int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << " dividido por " << entrada2[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << resto(entrada1[i], entrada2[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == resto(entrada1[i], entrada2[i]));
   }
 }
 
@@ -178,15 +178,15 @@ TEST_CASE("Teste_da_Divisao_inteira") {
   int entrada2[] = {4, 4, 3, 10};
   int num_testes = 4;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == div_(entrada1[i], entrada2[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int div_(int, int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada1[i]
-      << " dividido por " << entrada2[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << div_(entrada1[i], entrada2[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int div_(int, int)\n");
+    INFO("\nValores de entrada: " << entrada1[i]
+         << " dividido por " << entrada2[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << div_(entrada1[i], entrada2[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == div_(entrada1[i], entrada2[i]));
   }
 }
 
@@ -200,16 +200,16 @@ TEST_CASE("Teste_da_Soma_dos_digitos") {
   int entrada[] = {0, 7, 9, 45, 82, 428, 980};
   int num_testes = 7;
   for (int i = 0; i < num_testes; i++) {
-    CHECK_MESSAGE(esperado[i] == dig(entrada[i]),
-      "-------------------------------------------------------------------\n"
-      "Erro na função: int dig(int)\n"
-      "-------------------------------------------------------------------\n"
-      "Valores de entrada: " << entrada[i] << "\n\n"
-      "Resultado esperado: " << esperado[i] << "\n"
-      "Resultado retornado: " << dig(entrada[i]) << "\n\n"
-      "-------------------------------------------------------------------\n");
+    INFO("-------------------------------------------------------------------");
+    INFO("\nErro na função: int dig(int)\n");
+    INFO("\nValores de entrada: " << entrada[i] << "\n\n");
+    INFO("   Resultado esperado: " << esperado[i]);
+    INFO("   Resultado retornado: " << dig(entrada[i]));
+    INFO("-------------------------------------------------------------------");
+
+    CHECK(esperado[i] == dig(entrada[i]));
   }
 }
 }  // namespace Teste
 
-#endif  // DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#endif  // TRUNK_ITERACAO_TEST_ITERACAO_TEST_H_
