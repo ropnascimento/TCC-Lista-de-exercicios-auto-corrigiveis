@@ -1,6 +1,6 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 //
-// Lista sobre conjuntos associativos
+// Lista sobre conjuntos associativos - hash
 //
 // Questão 1.
 // Implemente em unordered_map.h e unordered_map.cc o TAD unordered_map,

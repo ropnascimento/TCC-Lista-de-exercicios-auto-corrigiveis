@@ -1,6 +1,6 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 //
-// Lista de exercícios sobre listas encadeadas - pilha.
+// Lista de exercícios sobre Alocacão Dinâmica - Lista Encadeada.
 //
 // Questão 1.
 // Implemente em stack.h e stack.cc o TAD stack, utilizando listas encadeadas.

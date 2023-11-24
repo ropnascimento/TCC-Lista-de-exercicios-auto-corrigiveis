@@ -1,6 +1,6 @@
 // Copyright 2014 Universidade Federal de Minas Gerais (UFMG)
 //
-// Lista sobre Conjuntos.
+// Lista sobre Conjuntos Associativos - Hash.
 //
 // Questão 1.
 // Implemente em unordered_set.h e unordered_set.cc o TAD unordered_set,
